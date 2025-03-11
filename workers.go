@@ -5,13 +5,6 @@ import (
 	"time"
 )
 
-func contador(n int) {
-	for i := 0; i < n; i++ {
-		fmt.Println(i)
-		time.Sleep(time.Second * 1)
-	}
-}
-
 func worker(workerID int, data chan int) {
 	for x := range data {
 		fmt.Printf("Worker %d received %d\n", workerID, x)
